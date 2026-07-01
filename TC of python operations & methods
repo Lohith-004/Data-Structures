@@ -1,0 +1,160 @@
+# 🐍 Python Time Complexity Cheat Sheet
+
+A quick reference for the time complexity of common Python operations and methods.
+
+---
+
+# 📌 List Operations
+
+| Operation | Example | Average Case | Worst Case |
+|-----------|----------|--------------|-------------|
+| Access by Index | `lst[i]` | O(1) | O(1) |
+| Set by Index | `lst[i] = x` | O(1) | O(1) |
+| Append | `lst.append(x)` | O(1) | O(n) |
+| Pop Last | `lst.pop()` | O(1) | O(1) |
+| Pop at Index | `lst.pop(i)` | O(n) | O(n) |
+| Insert | `lst.insert(i, x)` | O(n) | O(n) |
+| Delete | `del lst[i]` | O(n) | O(n) |
+| Remove Value | `lst.remove(x)` | O(n) | O(n) |
+| Search | `x in lst` | O(n) | O(n) |
+| Extend | `lst.extend(lst2)` | O(k) | O(k) |
+| Concatenation | `lst1 + lst2` | O(n+k) | O(n+k) |
+| Slice | `lst[a:b]` | O(k) | O(k) |
+| Reverse | `lst.reverse()` | O(n) | O(n) |
+| Copy | `lst.copy()` | O(n) | O(n) |
+| Sort | `lst.sort()` | O(n log n) | O(n log n) |
+
+---
+
+# 📌 Tuple Operations
+
+| Operation | Example | Complexity |
+|-----------|----------|-------------|
+| Access | `t[i]` | O(1) |
+| Search | `x in t` | O(n) |
+| Count | `t.count(x)` | O(n) |
+| Index | `t.index(x)` | O(n) |
+| Slicing | `t[a:b]` | O(k) |
+| Concatenation | `t1 + t2` | O(n+k) |
+
+---
+
+# 📌 String Operations
+
+| Operation | Example | Complexity |
+|-----------|----------|-------------|
+| Access | `s[i]` | O(1) |
+| Search | `'a' in s` | O(n) |
+| Concatenation | `s1 + s2` | O(n+k) |
+| Repeat | `s * k` | O(nk) |
+| Slice | `s[a:b]` | O(k) |
+| Replace | `s.replace()` | O(n) |
+| Split | `s.split()` | O(n) |
+| Join | `"".join(lst)` | O(n) |
+| Strip | `s.strip()` | O(n) |
+| Find | `s.find()` | O(n) |
+| Count | `s.count()` | O(n) |
+| Upper/Lower | `s.upper()` | O(n) |
+| Startswith/Endswith | `s.startswith()` | O(k) |
+
+---
+
+# 📌 Dictionary Operations
+
+| Operation | Example | Average Case | Worst Case |
+|-----------|----------|--------------|-------------|
+| Access | `d[key]` | O(1) | O(n) |
+| Insert | `d[key] = value` | O(1) | O(n) |
+| Delete | `del d[key]` | O(1) | O(n) |
+| Search | `key in d` | O(1) | O(n) |
+| Get | `d.get(key)` | O(1) | O(n) |
+| Pop | `d.pop(key)` | O(1) | O(n) |
+| Update | `d.update()` | O(k) | O(n) |
+| Copy | `d.copy()` | O(n) | O(n) |
+| Iterate | `for k in d` | O(n) | O(n) |
+
+---
+
+# 📌 Set Operations
+
+| Operation | Example | Average Case | Worst Case |
+|-----------|----------|--------------|-------------|
+| Add | `s.add(x)` | O(1) | O(n) |
+| Remove | `s.remove(x)` | O(1) | O(n) |
+| Discard | `s.discard(x)` | O(1) | O(n) |
+| Pop | `s.pop()` | O(1) | O(n) |
+| Search | `x in s` | O(1) | O(n) |
+| Union | `s1 | s2` | O(len(s1)+len(s2)) | O(n) |
+| Intersection | `s1 & s2` | O(min(n,m)) | O(nm) |
+| Difference | `s1 - s2` | O(len(s1)) | O(nm) |
+| Symmetric Difference | `s1 ^ s2` | O(len(s1)+len(s2)) | O(nm) |
+
+---
+
+# 📌 Deque Operations (`collections.deque`)
+
+| Operation | Example | Complexity |
+|-----------|----------|-------------|
+| Append Right | `dq.append(x)` | O(1) |
+| Append Left | `dq.appendleft(x)` | O(1) |
+| Pop Right | `dq.pop()` | O(1) |
+| Pop Left | `dq.popleft()` | O(1) |
+| Access Middle | `dq[i]` | O(n) |
+| Insert Middle | `dq.insert(i, x)` | O(n) |
+
+---
+
+# 📌 Heap Operations (`heapq`)
+
+| Operation | Example | Complexity |
+|-----------|----------|-------------|
+| Push | `heappush()` | O(log n) |
+| Pop | `heappop()` | O(log n) |
+| Peek Min | `heap[0]` | O(1) |
+| Heapify | `heapify(lst)` | O(n) |
+
+---
+
+# 📌 Sorting Algorithms
+
+| Algorithm | Best | Average | Worst |
+|-----------|------|----------|--------|
+| Bubble Sort | O(n) | O(n²) | O(n²) |
+| Selection Sort | O(n²) | O(n²) | O(n²) |
+| Insertion Sort | O(n) | O(n²) | O(n²) |
+| Merge Sort | O(n log n) | O(n log n) | O(n log n) |
+| Quick Sort | O(n log n) | O(n log n) | O(n²) |
+| Heap Sort | O(n log n) | O(n log n) | O(n log n) |
+| Python TimSort | O(n) | O(n log n) | O(n log n) |
+
+---
+
+# 📌 Useful Built-in Functions
+
+| Function | Complexity |
+|-----------|-------------|
+| `len(obj)` | O(1) |
+| `min(lst)` | O(n) |
+| `max(lst)` | O(n) |
+| `sum(lst)` | O(n) |
+| `sorted(lst)` | O(n log n) |
+| `reversed(lst)` | O(1) |
+| `enumerate(lst)` | O(1) |
+| `any(lst)` | O(n) |
+| `all(lst)` | O(n) |
+| `zip(a, b)` | O(1) |
+
+---
+
+# 🚀 DSA Interview Tips
+
+- **Dictionary and Set operations:** Usually **O(1)** due to hashing.
+- **List append/pop from end:** **O(1)**.
+- **List insert/delete in middle:** **O(n)**.
+- **Heap operations:** **O(log n)**.
+- **Sorting:** **O(n log n)**.
+- **Deque:** Best choice for implementing **Queue** and **Sliding Window** problems.
+
+---
+
+⭐ If this repository helped you, don't forget to **Star** it!
